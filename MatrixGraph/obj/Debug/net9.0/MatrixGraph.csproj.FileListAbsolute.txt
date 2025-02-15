@@ -1,0 +1,14 @@
+D:\C# Projects\TreeDataStrctures\MatrixGraph\bin\Debug\net9.0\MatrixGraph.exe
+D:\C# Projects\TreeDataStrctures\MatrixGraph\bin\Debug\net9.0\MatrixGraph.deps.json
+D:\C# Projects\TreeDataStrctures\MatrixGraph\bin\Debug\net9.0\MatrixGraph.runtimeconfig.json
+D:\C# Projects\TreeDataStrctures\MatrixGraph\bin\Debug\net9.0\MatrixGraph.dll
+D:\C# Projects\TreeDataStrctures\MatrixGraph\bin\Debug\net9.0\MatrixGraph.pdb
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.AssemblyInfoInputs.cache
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.AssemblyInfo.cs
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.csproj.CoreCompileInputs.cache
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.dll
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\refint\MatrixGraph.dll
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.pdb
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.genruntimeconfig.cache
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\ref\MatrixGraph.dll

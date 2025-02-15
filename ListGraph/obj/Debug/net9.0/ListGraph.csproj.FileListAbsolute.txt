@@ -1,0 +1,14 @@
+D:\C# Projects\TreeDataStrctures\ListGraph\bin\Debug\net9.0\ListGraph.exe
+D:\C# Projects\TreeDataStrctures\ListGraph\bin\Debug\net9.0\ListGraph.deps.json
+D:\C# Projects\TreeDataStrctures\ListGraph\bin\Debug\net9.0\ListGraph.runtimeconfig.json
+D:\C# Projects\TreeDataStrctures\ListGraph\bin\Debug\net9.0\ListGraph.dll
+D:\C# Projects\TreeDataStrctures\ListGraph\bin\Debug\net9.0\ListGraph.pdb
+D:\C# Projects\TreeDataStrctures\ListGraph\obj\Debug\net9.0\ListGraph.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\TreeDataStrctures\ListGraph\obj\Debug\net9.0\ListGraph.AssemblyInfoInputs.cache
+D:\C# Projects\TreeDataStrctures\ListGraph\obj\Debug\net9.0\ListGraph.AssemblyInfo.cs
+D:\C# Projects\TreeDataStrctures\ListGraph\obj\Debug\net9.0\ListGraph.csproj.CoreCompileInputs.cache
+D:\C# Projects\TreeDataStrctures\ListGraph\obj\Debug\net9.0\ListGraph.dll
+D:\C# Projects\TreeDataStrctures\ListGraph\obj\Debug\net9.0\refint\ListGraph.dll
+D:\C# Projects\TreeDataStrctures\ListGraph\obj\Debug\net9.0\ListGraph.pdb
+D:\C# Projects\TreeDataStrctures\ListGraph\obj\Debug\net9.0\ListGraph.genruntimeconfig.cache
+D:\C# Projects\TreeDataStrctures\ListGraph\obj\Debug\net9.0\ref\ListGraph.dll

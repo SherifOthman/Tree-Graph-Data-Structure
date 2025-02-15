@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C# Projects\\TreeDataStrctures\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B855D248-BE65-418A-912E-60E4B80BA220}|RedBlackTree\\RedBlackTree.csproj|d:\\c# projects\\treedatastrctures\\redblacktree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B855D248-BE65-418A-912E-60E4B80BA220}|RedBlackTree\\RedBlackTree.csproj|solutionrelative:redblacktree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{214197F2-3E7E-4DCC-A3E2-257DD92F8160}|AVLTree\\AVLTree.csproj|d:\\c# projects\\treedatastrctures\\avltree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{214197F2-3E7E-4DCC-A3E2-257DD92F8160}|AVLTree\\AVLTree.csproj|solutionrelative:avltree\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C# Projects\\TreeDataStrctures\\RedBlackTree\\Program.cs",
+              "RelativeDocumentMoniker": "RedBlackTree\\Program.cs",
+              "ToolTip": "D:\\C# Projects\\TreeDataStrctures\\RedBlackTree\\Program.cs",
+              "RelativeToolTip": "RedBlackTree\\Program.cs",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAiwAkBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T06:46:57.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C# Projects\\TreeDataStrctures\\AVLTree\\Program.cs",
+              "RelativeDocumentMoniker": "AVLTree\\Program.cs",
+              "ToolTip": "D:\\C# Projects\\TreeDataStrctures\\AVLTree\\Program.cs",
+              "RelativeToolTip": "AVLTree\\Program.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAqwAkBAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T00:35:04.879Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

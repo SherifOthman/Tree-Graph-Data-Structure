@@ -1,0 +1,14 @@
+D:\C# Projects\TreeDataStrctures\AVLTree\bin\Debug\net9.0\AVLTree.exe
+D:\C# Projects\TreeDataStrctures\AVLTree\bin\Debug\net9.0\AVLTree.deps.json
+D:\C# Projects\TreeDataStrctures\AVLTree\bin\Debug\net9.0\AVLTree.runtimeconfig.json
+D:\C# Projects\TreeDataStrctures\AVLTree\bin\Debug\net9.0\AVLTree.dll
+D:\C# Projects\TreeDataStrctures\AVLTree\bin\Debug\net9.0\AVLTree.pdb
+D:\C# Projects\TreeDataStrctures\AVLTree\obj\Debug\net9.0\AVLTree.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\TreeDataStrctures\AVLTree\obj\Debug\net9.0\AVLTree.AssemblyInfoInputs.cache
+D:\C# Projects\TreeDataStrctures\AVLTree\obj\Debug\net9.0\AVLTree.AssemblyInfo.cs
+D:\C# Projects\TreeDataStrctures\AVLTree\obj\Debug\net9.0\AVLTree.csproj.CoreCompileInputs.cache
+D:\C# Projects\TreeDataStrctures\AVLTree\obj\Debug\net9.0\AVLTree.dll
+D:\C# Projects\TreeDataStrctures\AVLTree\obj\Debug\net9.0\refint\AVLTree.dll
+D:\C# Projects\TreeDataStrctures\AVLTree\obj\Debug\net9.0\AVLTree.pdb
+D:\C# Projects\TreeDataStrctures\AVLTree\obj\Debug\net9.0\AVLTree.genruntimeconfig.cache
+D:\C# Projects\TreeDataStrctures\AVLTree\obj\Debug\net9.0\ref\AVLTree.dll

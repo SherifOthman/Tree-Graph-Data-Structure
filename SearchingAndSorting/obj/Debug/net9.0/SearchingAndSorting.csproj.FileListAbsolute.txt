@@ -1,0 +1,14 @@
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\bin\Debug\net9.0\SearchingAndSorting.exe
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\bin\Debug\net9.0\SearchingAndSorting.deps.json
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\bin\Debug\net9.0\SearchingAndSorting.runtimeconfig.json
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\bin\Debug\net9.0\SearchingAndSorting.dll
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\bin\Debug\net9.0\SearchingAndSorting.pdb
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\obj\Debug\net9.0\SearchingAndSorting.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\obj\Debug\net9.0\SearchingAndSorting.AssemblyInfoInputs.cache
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\obj\Debug\net9.0\SearchingAndSorting.AssemblyInfo.cs
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\obj\Debug\net9.0\SearchingAndSorting.csproj.CoreCompileInputs.cache
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\obj\Debug\net9.0\SearchingAndSorting.dll
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\obj\Debug\net9.0\refint\SearchingAndSorting.dll
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\obj\Debug\net9.0\SearchingAndSorting.pdb
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\obj\Debug\net9.0\SearchingAndSorting.genruntimeconfig.cache
+D:\C# Projects\TreeDataStrctures\SearchingAndSorting\obj\Debug\net9.0\ref\SearchingAndSorting.dll

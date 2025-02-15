@@ -1,0 +1,14 @@
+D:\C# Projects\TreeDataStrctures\GeneralTree\bin\Debug\net9.0\GeneralTree.exe
+D:\C# Projects\TreeDataStrctures\GeneralTree\bin\Debug\net9.0\GeneralTree.deps.json
+D:\C# Projects\TreeDataStrctures\GeneralTree\bin\Debug\net9.0\GeneralTree.runtimeconfig.json
+D:\C# Projects\TreeDataStrctures\GeneralTree\bin\Debug\net9.0\GeneralTree.dll
+D:\C# Projects\TreeDataStrctures\GeneralTree\bin\Debug\net9.0\GeneralTree.pdb
+D:\C# Projects\TreeDataStrctures\GeneralTree\obj\Debug\net9.0\GeneralTree.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\TreeDataStrctures\GeneralTree\obj\Debug\net9.0\GeneralTree.AssemblyInfoInputs.cache
+D:\C# Projects\TreeDataStrctures\GeneralTree\obj\Debug\net9.0\GeneralTree.AssemblyInfo.cs
+D:\C# Projects\TreeDataStrctures\GeneralTree\obj\Debug\net9.0\GeneralTree.csproj.CoreCompileInputs.cache
+D:\C# Projects\TreeDataStrctures\GeneralTree\obj\Debug\net9.0\GeneralTree.dll
+D:\C# Projects\TreeDataStrctures\GeneralTree\obj\Debug\net9.0\refint\GeneralTree.dll
+D:\C# Projects\TreeDataStrctures\GeneralTree\obj\Debug\net9.0\GeneralTree.pdb
+D:\C# Projects\TreeDataStrctures\GeneralTree\obj\Debug\net9.0\GeneralTree.genruntimeconfig.cache
+D:\C# Projects\TreeDataStrctures\GeneralTree\obj\Debug\net9.0\ref\GeneralTree.dll

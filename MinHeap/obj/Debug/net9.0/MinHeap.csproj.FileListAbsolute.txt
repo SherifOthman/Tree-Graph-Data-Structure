@@ -1,0 +1,14 @@
+D:\C# Projects\TreeDataStrctures\MinHeap\bin\Debug\net9.0\MinHeap.exe
+D:\C# Projects\TreeDataStrctures\MinHeap\bin\Debug\net9.0\MinHeap.deps.json
+D:\C# Projects\TreeDataStrctures\MinHeap\bin\Debug\net9.0\MinHeap.runtimeconfig.json
+D:\C# Projects\TreeDataStrctures\MinHeap\bin\Debug\net9.0\MinHeap.dll
+D:\C# Projects\TreeDataStrctures\MinHeap\bin\Debug\net9.0\MinHeap.pdb
+D:\C# Projects\TreeDataStrctures\MinHeap\obj\Debug\net9.0\MinHeap.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\TreeDataStrctures\MinHeap\obj\Debug\net9.0\MinHeap.AssemblyInfoInputs.cache
+D:\C# Projects\TreeDataStrctures\MinHeap\obj\Debug\net9.0\MinHeap.AssemblyInfo.cs
+D:\C# Projects\TreeDataStrctures\MinHeap\obj\Debug\net9.0\MinHeap.csproj.CoreCompileInputs.cache
+D:\C# Projects\TreeDataStrctures\MinHeap\obj\Debug\net9.0\MinHeap.dll
+D:\C# Projects\TreeDataStrctures\MinHeap\obj\Debug\net9.0\refint\MinHeap.dll
+D:\C# Projects\TreeDataStrctures\MinHeap\obj\Debug\net9.0\MinHeap.pdb
+D:\C# Projects\TreeDataStrctures\MinHeap\obj\Debug\net9.0\MinHeap.genruntimeconfig.cache
+D:\C# Projects\TreeDataStrctures\MinHeap\obj\Debug\net9.0\ref\MinHeap.dll
