@@ -12,3 +12,4 @@ D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\refint\MatrixGraph
 D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.pdb
 D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.genruntimeconfig.cache
 D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\ref\MatrixGraph.dll
+D:\C# Projects\TreeDataStrctures\MatrixGraph\obj\Debug\net9.0\MatrixGraph.sourcelink.json

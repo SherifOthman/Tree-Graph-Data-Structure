@@ -12,3 +12,4 @@ D:\C# Projects\TreeDataStrctures\RedBlackTree\obj\Debug\net9.0\refint\RedBlackTr
 D:\C# Projects\TreeDataStrctures\RedBlackTree\obj\Debug\net9.0\RedBlackTree.pdb
 D:\C# Projects\TreeDataStrctures\RedBlackTree\obj\Debug\net9.0\RedBlackTree.genruntimeconfig.cache
 D:\C# Projects\TreeDataStrctures\RedBlackTree\obj\Debug\net9.0\ref\RedBlackTree.dll
+D:\C# Projects\TreeDataStrctures\RedBlackTree\obj\Debug\net9.0\RedBlackTree.sourcelink.json

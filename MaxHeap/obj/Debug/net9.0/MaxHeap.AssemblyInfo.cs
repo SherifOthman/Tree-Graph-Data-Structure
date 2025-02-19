@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MaxHeap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2936bd23c608081b12fc9a162d6fd7573ffdd157")]
 [assembly: System.Reflection.AssemblyProductAttribute("MaxHeap")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MaxHeap")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

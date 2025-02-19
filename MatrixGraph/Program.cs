@@ -1,289 +1,207 @@
-﻿namespace MatrixGraph;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-public class Graph
+class Graph
 {
-    public enum enGraphDirectionType { unDirected, Directed };
-    private enGraphDirectionType _directionType;
+    // Enum for graph direction type: Directed or Undirected
+    public enum enGraphDirectionType { Directed, unDirected }
 
-    private readonly Dictionary<string, int> _verticesDictionary;
-    private int[,] _verticesMatrix;
+    // Adjacency matrix to represent the graph
+    private int[,] _adjacencyMatrix;
 
-    private int _count = 0;
-    public Graph(List<string> vertices, enGraphDirectionType directionType = enGraphDirectionType.unDirected)
+    // Dictionary to map vertex names to indices
+    private Dictionary<string, int> _vertexDictionary;
+
+    // Total number of vertices in the graph
+    private int _numberOfVertices;
+
+    // Specifies whether the graph is directed or undirected
+    private enGraphDirectionType _GraphDirectionType;
+
+    // Constructor to initialize the graph
+    public Graph(List<string> vertices, enGraphDirectionType GraphDirectionType)
     {
-        _count = vertices.Count;
+        _GraphDirectionType = GraphDirectionType; // Set graph direction type
+        _numberOfVertices = vertices.Count; // Total vertices
+        _adjacencyMatrix = new int[_numberOfVertices, _numberOfVertices]; // Initialize adjacency matrix
+        _vertexDictionary = new Dictionary<string, int>(); // Initialize vertex dictionary
 
-        _verticesDictionary = new Dictionary<string, int>();
-        _verticesMatrix = new int[_count, _count];
-
-        _directionType = directionType;
-        foreach (var vertex in vertices.Index())
+        // Map each vertex name to an index
+        for (int i = 0; i < vertices.Count; i++)
         {
-            _verticesDictionary[vertex.Item] = vertex.Index;
+            _vertexDictionary[vertices[i]] = i;
         }
     }
 
-
-    public void AddVertex(string vertex)
-    {
-        if (_verticesDictionary.ContainsKey(vertex))
-            return;
-
-        _verticesDictionary[vertex] = _count;
-
-        Resize();
-    }
-
-    public void RemoveVertex(string vertex)
-    {
-        if (!_verticesDictionary.ContainsKey(vertex))
-            return;
-
-        int vertexIndex = _verticesDictionary[vertex];
-        _verticesDictionary.Remove(vertex);
-        ReAssignVertexIndices();
-
-        shrink(vertexIndex);
-    }
-
-    private void shrink(int indexToBeRmoved)
-    {
-        int[,] temp = _verticesMatrix;
-        _verticesMatrix = new int[_count - 1, _count - 1];
-
-        int row = 0;
-        int column = 0;
-
-        for (int i = 0; i < _count; i++)
-        {
-            if (i == indexToBeRmoved)
-                continue;
-
-            for (int j = 0; j < _count; j++)
-            {
-                if (j == indexToBeRmoved)
-                    continue;
-
-                _verticesMatrix[row, column] = temp[i, j];
-                column++;
-            }
-
-            row++;
-            column = 0;
-        }
-
-        _count--;
-    }
-
-    private void Resize()
-    {
-
-        int[,] temp = _verticesMatrix;
-        _verticesMatrix = new int[_count + 1, _count + 1];
-
-        for (int i = 0; i < _count; i++)
-        {
-            for (int j = 0; j < _count; j++)
-            {
-                _verticesMatrix[i, j] = temp[i, j];
-            }
-        }
-
-        _count++;
-    }
-
-    private void ReAssignVertexIndices()
-    {
-
-        foreach (var element in _verticesDictionary.Index())
-        {
-            _verticesDictionary[element.Item.Key] = element.Index;
-        }
-    }
-
-
+    // Adds an edge between two vertices with a given weight
     public void AddEdge(string source, string destination, int weight)
     {
-        if (_verticesDictionary.ContainsKey(source) && _verticesDictionary.ContainsKey(destination))
+        // Check if both vertices exist in the graph
+        if (_vertexDictionary.ContainsKey(source) && _vertexDictionary.ContainsKey(destination))
         {
-            int sourceIndex = _verticesDictionary[source];
-            int destinationIndex = _verticesDictionary[destination];
+            int sourceIndex = _vertexDictionary[source]; // Get index of source vertex
+            int destinationIndex = _vertexDictionary[destination]; // Get index of destination vertex
 
-            _verticesMatrix[sourceIndex, destinationIndex] = weight;
+            // Add the edge to the adjacency matrix
+            _adjacencyMatrix[sourceIndex, destinationIndex] = weight;
 
-            if (_directionType == enGraphDirectionType.unDirected)
-                _verticesMatrix[destinationIndex, sourceIndex] = weight;
-        }
-    }
-
-    public int GetInDegree(string vertex)
-    {
-        int inDgree = 0;
-
-        if (_verticesDictionary.ContainsKey(vertex))
-        {
-            int vertexIndex = _verticesDictionary[vertex];
-
-
-            for (int row = 0; row < _count; row++)
+            // If the graph is undirected, add the edge in the opposite direction as well
+            if (_GraphDirectionType == enGraphDirectionType.unDirected)
             {
-                inDgree += _verticesMatrix[row, vertexIndex];
+                _adjacencyMatrix[destinationIndex, sourceIndex] = weight;
             }
         }
-
-
-        return inDgree;
-    }
-
-    public int GetOutDegree(string vertex)
-    {
-        int outDgree = 0;
-
-        if (_verticesDictionary.ContainsKey(vertex))
+        else
         {
-            int vertexIndex = _verticesDictionary[vertex];
-
-            for (int column = 0; column < _count; column++)
-            {
-                outDgree += _verticesMatrix[vertexIndex, column];
-            }
-        }
-
-        return outDgree;
-    }
-
-    public bool IsEdge(string source, string destantion)
-    {
-        if (_verticesDictionary.ContainsKey(source) && _verticesDictionary.ContainsKey(destantion))
-        {
-            int weight = 0;
-            int sourceIndex = _verticesDictionary[source];
-            int destantionIndex = _verticesDictionary[destantion];
-            weight = _verticesMatrix[sourceIndex, destantionIndex];
-
-            return weight > 0;
-        }
-
-        return false;
-    }
-
-    public void RemoveEdge(string source, string destantion)
-    {
-        if (_verticesDictionary.ContainsKey(source) && _verticesDictionary.ContainsKey(destantion))
-        {
-            int sourceIndex = _verticesDictionary[source];
-            int destanationIndex = _verticesDictionary[destantion];
-
-            _verticesMatrix[sourceIndex, destanationIndex] = 0;
-            if (_directionType == enGraphDirectionType.unDirected)
-                _verticesMatrix[destanationIndex, sourceIndex] = 0;
+            // If either vertex is invalid, print an error message
+            Console.WriteLine($"Invalid vertices: {source} or {destination}");
         }
     }
 
+    // Displays the graph as an adjacency matrix
     public void DisplayGraph(string message)
     {
-        Console.WriteLine($"\n {message} \n");
-        Console.Write("  ");
+        Console.WriteLine("\n" + message + "\n"); // Print the message
+        Console.Write("  "); // Spacer for formatting
 
-        foreach (var vertex in _verticesDictionary)
+        // Print column headers (vertex names)
+        foreach (var vertex in _vertexDictionary.Keys)
         {
-            Console.Write($"{vertex.Key} ");
+            Console.Write(vertex + " ");
         }
         Console.WriteLine();
 
-        foreach (var vertex in _verticesDictionary)
+        // Print each row of the adjacency matrix with row headers (vertex names)
+        foreach (var source in _vertexDictionary)
         {
-            Console.Write($"{vertex.Key} ");
-
-            foreach (var v in _verticesDictionary.Index())
+            Console.Write(source.Key + " "); // Print the row header (vertex name)
+            for (int j = 0; j < _numberOfVertices; j++)
             {
-                Console.Write($"{_verticesMatrix[vertex.Value, v.Index]} ");
+                Console.Write(_adjacencyMatrix[source.Value, j] + " "); // Print the weight
             }
             Console.WriteLine();
         }
-        Console.WriteLine();
     }
-}
 
-internal class Program
-{
-    static void Main(string[] args)
+    // Dijkstra's Algorithm using Priority Queue (Min-Heap)
+    public void Dijkstra(string startVertex)
     {
+        // Validate the starting vertex
+        if (!_vertexDictionary.ContainsKey(startVertex))
+        {
+            Console.WriteLine("Invalid start vertex.");
+            return;
+        }
+
+        int startIndex = _vertexDictionary[startVertex]; // Get the index of the starting vertex
+
+        // Array to store the shortest distance from the start vertex to each vertex
+        int[] distances = new int[_numberOfVertices];
+
+        // Boolean array to track if a vertex has been visited
+        bool[] visited = new bool[_numberOfVertices];
+
+        // Array to store the predecessor of each vertex in the shortest path
+        string[] predecessors = new string[_numberOfVertices];
+
+        // Initialize distances to infinity and predecessors to null
+        for (int i = 0; i < _numberOfVertices; i++)
+        {
+            distances[i] = int.MaxValue; // Distance set to "infinity"
+            predecessors[i] = null; // No predecessor initially
+        }
+        distances[startIndex] = 0; // Distance to the starting vertex is 0
+
+        // Priority queue (Min-Heap) to store vertices with their distances
+        var priorityQueue = new SortedSet<(int distance, int vertexIndex)>(
+            Comparer<(int distance, int vertexIndex)>.Create((x, y) =>
+                x.distance == y.distance ? x.vertexIndex.CompareTo(y.vertexIndex) : x.distance.CompareTo(y.distance))
+        );
+
+        // Add the starting vertex to the priority queue
+        priorityQueue.Add((0, startIndex));
+
+        // Process all vertices in the priority queue
+        while (priorityQueue.Count > 0)
+        {
+            // Extract the vertex with the smallest distance
+            var (currentDistance, currentIndex) = priorityQueue.Min;
+            priorityQueue.Remove(priorityQueue.Min);
+
+            // Skip the vertex if it's already visited
+            if (visited[currentIndex]) continue;
+            visited[currentIndex] = true; // Mark the vertex as visited
+
+            // Update the distances for all neighbors of the current vertex
+            for (int neighbor = 0; neighbor < _numberOfVertices; neighbor++)
+            {
+                // Check if there is an edge and the neighbor is unvisited
+                if (_adjacencyMatrix[currentIndex, neighbor] > 0 && !visited[neighbor])
+                {
+                    // Calculate the new distance to the neighbor
+                    int newDistance = distances[currentIndex] + _adjacencyMatrix[currentIndex, neighbor];
+
+                    // If the new distance is shorter, update it
+                    if (newDistance < distances[neighbor])
+                    {
+                        priorityQueue.Remove((distances[neighbor], neighbor)); // Remove the old distance
+                        distances[neighbor] = newDistance; // Update to the new distance
+                        predecessors[neighbor] = GetVertexName(currentIndex); // Update the predecessor
+                        priorityQueue.Add((newDistance, neighbor)); // Add the updated distance to the queue
+                    }
+                }
+            }
+        }
+
+        // Print the shortest paths and their distances
+        Console.WriteLine("\nShortest paths from vertex " + startVertex + ":");
+        for (int i = 0; i < _numberOfVertices; i++)
+        {
+            Console.WriteLine($"{startVertex} -> {GetVertexName(i)}: Distance = {distances[i]}, Path = {GetPath(predecessors, i)}");
+        }
+    }
+
+    // Helper method to get the name of a vertex by its index
+    private string GetVertexName(int index)
+    {
+        return _vertexDictionary.FirstOrDefault(pair => pair.Value == index).Key;
+    }
+
+    // Helper method to reconstruct the shortest path from the source to a vertex
+    private string GetPath(string[] predecessors, int currentIndex)
+    {
+        // Base case: If there is no predecessor, return the current vertex
+        if (predecessors[currentIndex] == null)
+            return GetVertexName(currentIndex);
+
+        // Recursive case: Build the path using predecessors
+        return GetPath(predecessors, _vertexDictionary[predecessors[currentIndex]]) + " -> " + GetVertexName(currentIndex);
+    }
+
+    // Main method to test the program
+    public static void Main(string[] args)
+    {
+        // Define vertices
         List<string> vertices = new List<string> { "A", "B", "C", "D", "E" };
 
-        Graph graph1 = new Graph(vertices, Graph.enGraphDirectionType.unDirected);
+        // Create a directed graph
+        Graph graph = new Graph(vertices, enGraphDirectionType.Directed);
 
-        graph1.AddEdge("A", "B", 1);
-        graph1.AddEdge("A", "C", 1);
-        graph1.AddEdge("B", "D", 1);
-        graph1.AddEdge("B", "E", 1);
-        graph1.AddEdge("C", "D", 1);
-        graph1.AddEdge("D", "E", 1);
+        // Add edges with weights
+        graph.AddEdge("A", "B", 4);
+        graph.AddEdge("A", "C", 1);
+        graph.AddEdge("C", "B", 2);
+        graph.AddEdge("C", "D", 4);
+        graph.AddEdge("B", "E", 4);
+        graph.AddEdge("D", "E", 1);
 
+        // Display the graph
+        graph.DisplayGraph("Adjacency Matrix:");
 
-        graph1.DisplayGraph("Adjacency Matrix for Example1 (Undirected Graph):");
+        // Run Dijkstra's Algorithm from vertex "A"
+        graph.Dijkstra("A");
 
-        //graph1.AddVertex("Y");
-
-        //graph1.DisplayGraph("After adding Y");
-
-        graph1.RemoveVertex("C");
-
-        graph1.DisplayGraph("After Removing  C");
-
-
-        Console.WriteLine("\n----------------------------\n\n\n");
-
-        Graph graph2 = new Graph(vertices, Graph.enGraphDirectionType.Directed);
-
-        graph2.AddEdge("A", "A", 1);
-        graph2.AddEdge("A", "B", 1);
-        graph2.AddEdge("A", "C", 1);
-        graph2.AddEdge("B", "E", 1);
-        graph2.AddEdge("D", "B", 1);
-        graph2.AddEdge("D", "C", 1);
-        graph2.AddEdge("D", "E", 1);
-
-        graph2.DisplayGraph("Adjacency Matrix for Example (Directed Graph):");
-
-        Console.WriteLine($"InDegree of vertex D: {graph2.GetInDegree("D")}");
-        Console.WriteLine($"OutDgree of vertex D: {graph2.GetOutDegree("D")}");
-
-
-        Graph graph3 = new Graph(vertices);
-
-        graph3.AddEdge("A", "B", 5);
-        graph3.AddEdge("A", "C", 3);
-        graph3.AddEdge("C", "D", 10);
-        graph3.AddEdge("B", "D", 12);
-        graph3.AddEdge("B", "E", 2);
-        graph3.AddEdge("D", "E", 7);
-
-        graph3.DisplayGraph("Adjacency Matrix for Example3 (Weighted Graph):");
-
-        Console.WriteLine("\nIs there an edge between A and B in Graph3? " + graph3.IsEdge("A", "B"));
-
-
-        Console.WriteLine("\nIs there an edge between B and C in Graph3? " + graph3.IsEdge("B", "C"));
-
-
-        Console.WriteLine("\nIs there an edge between E and D in Graph3? " + graph3.IsEdge("E", "D"));
-
-        Console.WriteLine("\nIs there an edge between A and A in Graph3? " + graph3.IsEdge("A", "A"));
-
-        Console.WriteLine("\nInDegree of vertex A: " + graph3.GetInDegree("A"));
-
-        Console.WriteLine("\nOutDegree of vertex A: " + graph3.GetOutDegree("A"));
-
-        Console.WriteLine("\n------------------------------\n");
-
-
-        Console.WriteLine("\nRemoveing Edge between E and D:");
-        graph3.RemoveEdge("E", "D");
-
-        graph3.DisplayGraph("After Removeing Edge between E and D:");
-
-
-        Console.WriteLine("\nIs there an edge between E and D in Graph3? " + graph3.IsEdge("E", "D"));
+        Console.ReadKey();
     }
 }
